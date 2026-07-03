@@ -164,36 +164,34 @@ const fashionCategories = [
 
 const comboOffers = [
   {
-    title: "Diamond Beauty Combo",
+    title: "Bridal Care Combo",
     price: "₹3,999",
     popular: false,
-    services: ["Diamond Facial", "Clean Up", "Threading", "Eyebrow", "Upper Lip", "Hair Spa"],
+    services: ["Skin Miracle Facial", "Hair Spa", "Full Leg Pedicure", "Full Arms Wax", "Threading"],
+  },
+  {
+    title: "Diamond Beauty Combo",
+    price: "₹2,999",
+    popular: false,
+    services: ["Diamond Facial", "Hair Spa", "Pedicure", "Full Arms Wax", "Blow Dry"],
+  },
+  {
+    title: "Bridal Pre-Glow Combo",
+    price: "₹3,499",
+    popular: true,
+    services: ["Skin Miracle Facial", "Fruit De-Tan", "Threading", "Hair Spa", "Pedicure"],
+  },
+  {
+    title: "Wedding Ready Combo",
+    price: "₹4,499",
+    popular: false,
+    services: ["Briming Facial", "Hair Spa", "Manicure", "Pedicure", "Blow Dry"],
   },
   {
     title: "Hair Revival Combo",
     price: "₹1,499",
     popular: false,
-    services: ["Hair Spa", "Hair Wash", "Blow Dry", "Hot Oil Massage"],
-  },
-  {
-    title: "Bridal Pre-Glow Combo",
-    price: "₹4,499",
-    popular: true,
-    services: [
-      "Golden Facial",
-      "Pedicure",
-      "Manicure",
-      "Hair Spa",
-      "Hair Wash",
-      "Threading",
-      "Upper Lip",
-    ],
-  },
-  {
-    title: "Wedding Ready Combo",
-    price: "₹3,499",
-    popular: false,
-    services: ["Fruit Facial", "Hair Spa", "Pedicure", "Manicure", "Hair Wash", "Blow Dry"],
+    services: ["Hair Spa", "Hot Oil Massage", "Hair Wash", "Blow Dry", "Threading"],
   },
 ];
 
