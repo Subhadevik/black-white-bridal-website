@@ -4,17 +4,38 @@ const reviews = [
     {
         quote:
             "Wonderful bridal makeover and excellent service from start to finish.",
-        name: "Bridal Client",
+        name: "Priya S.",
+        role: "Bridal Client",
     },
     {
         quote:
             "Excellent fashion designing and a perfect fit for my reception outfit.",
-        name: "Fashion Client",
+        name: "Ananya R.",
+        role: "Fashion Client",
     },
     {
         quote:
             "Highly professional team — the whole experience felt premium and personal.",
-        name: "Wedding Client",
+        name: "Meera K.",
+        role: "Wedding Client",
+    },
+    {
+        quote:
+            "They understood exactly the look I wanted and made me feel so confident on my wedding day.",
+        name: "Divya M.",
+        role: "Bridal Client",
+    },
+    {
+        quote:
+            "The blouse fitting was flawless and the embroidery work exceeded what I imagined.",
+        name: "Kavya N.",
+        role: "Fashion Client",
+    },
+    {
+        quote:
+            "From the trial to the final look, everything was on time and stress-free. Highly recommend.",
+        name: "Sneha T.",
+        role: "Bridal Client",
     },
 ];
 
@@ -45,11 +66,14 @@ export default function Testimonials() {
             <div className="section-container">
                 <div className="grid md:grid-cols-3 gap-6">
                     {reviews.map((review) => (
-                        <div key={review.name} className="testimonial-card">
+                        <div key={review.quote} className="testimonial-card">
                             <Stars />
                             <p className="muted-text mb-2 leading-8">{review.quote}</p>
                             <p className="testimonial-name gold-text text-sm uppercase tracking-[2px]">
                                 {review.name}
+                            </p>
+                            <p className="muted-text text-xs uppercase tracking-[1.5px] opacity-70">
+                                {review.role}
                             </p>
                         </div>
                     ))}

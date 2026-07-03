@@ -30,11 +30,11 @@ export default function Hero() {
 
           <h1 className="text-white hero-title mb-2">Black & White</h1>
 
-          <h2 className="gold-text hero-subtitle mb-8">Bridal Studio</h2>
+          <h2 className="gold-text hero-subtitle mb-10">Bridal Studio</h2>
 
-          <div className="gold-divider mb-10" />
+          <div className="gold-divider mb-12" />
 
-          <p className="muted-text text-lg md:text-xl mb-12">
+          <p className="muted-text text-lg md:text-xl leading-relaxed mb-16">
             Creating timeless beauty experiences through luxury bridal
             makeovers, premium beauty services, and bespoke fashion
             designing.
