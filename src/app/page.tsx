@@ -6,6 +6,7 @@ import BeautySection from "@/components/home/BeautySection";
 import FashionSection from "@/components/home/FashionSection";
 import Testimonials from "@/components/home/Testimonials";
 import FAQ from "@/components/home/FAQ";
+import { faqs } from "@/components/home/faqData";
 import BookAppointment from "@/components/home/BookAppointment";
 import WhatsappButton from "@/components/ui/WhatsappButton";
 import type { Metadata } from "next";
@@ -16,9 +17,23 @@ export const metadata: Metadata = {
     "Black & White Bridal Studio offers bridal makeup, beauty parlour services, hair styling, skincare, and fashion designing.",
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
       <Hero />
       <About />
