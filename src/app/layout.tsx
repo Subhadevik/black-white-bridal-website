@@ -92,6 +92,51 @@ export const metadata: Metadata = {
   category: "Beauty & Fashion",
 };
 
+const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  name: "Black & White Bridal Studio",
+  image: "https://www.blackandwhitebridalstudio.com/images/logo.png",
+  url: "https://www.blackandwhitebridalstudio.com",
+  telephone: "+91-63803-42299",
+  priceRange: "₹₹",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Ananganoor Corner Bus Stop, Salem Main Rd",
+    addressLocality: "Komarapalayam",
+    addressRegion: "Tamil Nadu",
+    postalCode: "638183",
+    addressCountry: "IN",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "10:00",
+      closes: "20:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: "09:00",
+      closes: "21:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: "10:00",
+      closes: "18:00",
+    },
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+91-63803-42299",
+    contactType: "customer service",
+    areaServed: "IN",
+  },
+  sameAs: ["https://instagram.com/blackandwhitebridalstudio"],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -102,6 +147,10 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${inter.variable} bg-black text-white antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+        />
         {children}
       </body>
     </html>
