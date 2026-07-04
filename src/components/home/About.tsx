@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <section className="bg-black section-padding">
+        <section className="bg-black about-hero">
             <div className="flex justify-center">
                 <div className="w-full max-w-4xl px-6 text-center">
                     <p className="section-subtitle mb-5">Our Story</p>

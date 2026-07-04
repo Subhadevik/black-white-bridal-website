@@ -113,6 +113,18 @@ p {
   font-size: clamp(1.75rem, 4vw, 3.25rem);
 }
 
+.about-hero {
+  padding-top: 160px;
+  padding-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding-top: 120px;
+    padding-bottom: 44px;
+  }
+}
+
 /* ========================================
    SECTIONS
 ======================================== */
