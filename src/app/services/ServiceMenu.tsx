@@ -61,29 +61,34 @@ export default function ServiceMenu({ categories }: { categories: Category[] }) 
         </h3>
         <div className="gold-divider" style={{ margin: "0 auto 36px" }} />
 
-        <div
-          style={{
-            columnCount: current.services.length > 7 ? 2 : 1,
-            columnGap: "56px",
-          }}
-        >
+        <div className="service-menu-columns">
           {current.services.map((s) => (
             <div
               key={s.name}
               style={{
                 display: "flex",
                 alignItems: "baseline",
+                gap: "8px",
                 padding: "10px 0",
                 breakInside: "avoid",
               }}
             >
-              <span style={{ color: "#e0e0e0", fontSize: "15.5px", whiteSpace: "nowrap" }}>
+              <span
+                style={{
+                  color: "#e0e0e0",
+                  fontSize: "15px",
+                  minWidth: 0,
+                  flex: "0 1 auto",
+                  whiteSpace: "normal",
+                  overflowWrap: "break-word",
+                }}
+              >
                 {s.name}
               </span>
               <span
                 style={{
-                  flex: 1,
-                  margin: "0 10px",
+                  flex: "1 1 auto",
+                  minWidth: "16px",
                   borderBottom: "1px dotted rgba(212,175,55,.3)",
                   transform: "translateY(-4px)",
                 }}
@@ -93,14 +98,17 @@ export default function ServiceMenu({ categories }: { categories: Category[] }) 
                   style={{
                     color: "#d4af37",
                     fontWeight: 600,
-                    fontSize: "15.5px",
+                    fontSize: "15px",
                     whiteSpace: "nowrap",
+                    flexShrink: 0,
                   }}
                 >
                   {s.price}
                 </span>
               ) : (
-                <span style={{ color: "#d4af37", fontSize: "13px" }}>&#10003;</span>
+                <span style={{ color: "#d4af37", fontSize: "13px", flexShrink: 0 }}>
+                  &#10003;
+                </span>
               )}
             </div>
           ))}
@@ -119,6 +127,15 @@ export default function ServiceMenu({ categories }: { categories: Category[] }) 
           to {
             opacity: 1;
             transform: translateY(0);
+          }
+        }
+        .service-menu-columns {
+          column-count: 1;
+        }
+        @media (min-width: 700px) {
+          .service-menu-columns {
+            column-count: 2;
+            column-gap: 56px;
           }
         }
       `}</style>

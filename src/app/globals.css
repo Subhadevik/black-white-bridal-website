@@ -1077,3 +1077,66 @@ img {
     padding-inline: 20px;
   }
 }
+
+/* ========================================
+   SERVICE MENU ROWS (responsive)
+======================================== */
+
+.service-menu-columns {
+  column-count: 1;
+  column-gap: 56px;
+}
+
+.service-menu-columns--two {
+  column-count: 2;
+}
+
+.service-menu-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 10px 0;
+  break-inside: avoid;
+}
+
+.service-menu-name {
+  color: #e0e0e0;
+  font-size: 15.5px;
+  min-width: 0;
+  flex: 0 1 auto;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.service-menu-dots {
+  flex: 1 1 auto;
+  min-width: 16px;
+  margin: 0 2px;
+  border-bottom: 1px dotted rgba(212, 175, 55, 0.3);
+  transform: translateY(-4px);
+}
+
+.service-menu-price {
+  color: #d4af37;
+  font-weight: 600;
+  font-size: 15.5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.service-menu-check {
+  color: #d4af37;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .service-menu-columns--two {
+    column-count: 1;
+  }
+
+  .service-menu-name,
+  .service-menu-price {
+    font-size: 14px;
+  }
+}
