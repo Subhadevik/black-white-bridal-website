@@ -10,6 +10,7 @@ import { faqs } from "@/components/home/faqData";
 import BookAppointment from "@/components/home/BookAppointment";
 import WhatsappButton from "@/components/ui/WhatsappButton";
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: "Black & White Bridal Studio | Beauty Parlour & Fashion Designing",
@@ -44,6 +45,7 @@ export default function Home() {
       <BookAppointment />
       <WhatsappButton />
       <Footer />
+      <Analytics />
     </>
   );
 }
